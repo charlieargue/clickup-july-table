@@ -21,10 +21,10 @@ Generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.
 ```sh
 
 # clone the repo master branch
-
+git clone https://github.com/charlieargue/clickup-july-table.git
 
 # change directory into the front-end subdirectory
-cd fe
+cd clickup-july-table
 
 # install all libraries
 npm i
@@ -32,46 +32,33 @@ npm i
 
 # Quick Start
 
-You will need to grab a `.env` environment variable file:
-```
-🛑 Both the front-end and the back-end will not work without the correct .env files!
-```
-
 ```sh
 # start the app locally
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 
 
-# Libraries Used
+# Implementation Notes:
+>  resize the columns
+- This was part of handsomtable's native functionality, so was not coded nor exercised in e2e tests.
 
-- `@apollo/client`
-- `react-bootstrap`
-- `graphql`
-- `lodash`
-- `moment`
-- `google-maps-react`
-- `react-geocode`
+> drag and drop columns to reorder using the native Angular cdk drag and drop
+- Also part of handsomtable's native functionality, so was not coded nor exercised in e2e tests. 
+
+> angular fundamentals (directive, pipe)
+- My custom directive allows the `ENTER` key to submit the search field. And `async pipes` are used to subscribe to the state observables from inside angular templates.
 
 # Testing
 
 End-to-End (e2e) testing via Cypress is included with this project, and can be found in the `cypress` subdirectory.
 
-Testing is only for local environments at this stage, so:
-```
-🛑 Both the front-end and the back-end MUST BE RUNNING locally for the tests to work!
-```
-
 ```sh
 # open Cypress testing tool
 npm test
 ```
-
-![Cypress testing tool](how-to-test-01.png)
-
-Then to run all tests, click the `user_spec.js` test file, and you should see:
+Then to run all tests, click the `july_table_spec.js` test file, and you should see:
 
 ![Cypress running tests](how-to-cypress-tests.gif)
 
