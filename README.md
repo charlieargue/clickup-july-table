@@ -54,7 +54,16 @@ Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 
 End-to-End (e2e) testing via Cypress is included with this project, and can be found in the `cypress` subdirectory.
 
+```
+🛑 The front-end MUST BE RUNNING locally for the tests to work!
+```
+
+Run the following commands **from a new terminal tab** to keep the front-end running:
 ```sh
+
+# change directory into the front-end subdirectory, for eg.
+cd clickup-july-table
+
 # open Cypress testing tool
 npm run e2e
 ```
