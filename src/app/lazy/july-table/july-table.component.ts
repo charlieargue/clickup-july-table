@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import isNil from 'lodash/isNil';
 import isEmpty from 'lodash/isEmpty';
@@ -16,20 +16,9 @@ import { take } from 'rxjs/internal/operators/take';
 @UntilDestroy()
 @Component({
   selector: 'app-july-table',
-  template: `
-    <div *ngIf="dataset.length">
-      <app-search-form></app-search-form>
-      <hot-table
-        [hotId]="id"
-        [settings]="tableSettings"
-        [data]="dataset"
-        licenseKey="non-commercial-and-evaluation"
-      ></hot-table>
-      <button id="btnLoadMore" style="margin-top: 16px;" (click)="increment()">
-        Load More
-      </button>
-    </div>
-  `,
+  templateUrl: './july-table.component.html',
+  styleUrls: ['./july-table.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class JulyTableComponent implements OnInit, OnDestroy {
   page$: Observable<number>;
@@ -130,5 +119,5 @@ export class JulyTableComponent implements OnInit, OnDestroy {
     });
   }
 
-  public ngOnDestroy() {}
+  public ngOnDestroy() { }
 }

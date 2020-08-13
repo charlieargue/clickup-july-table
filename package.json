@@ -25,6 +25,7 @@
     "@ngrx/store-devtools": "9.2.0",
     "handsontable": "7.4.2",
     "lodash-es": "4.17.15",
+    "ng-zorro-antd": "^9.3.0",
     "rxjs": "6.5.5",
     "tslib": "2.0.0",
     "zone.js": "0.10.3"

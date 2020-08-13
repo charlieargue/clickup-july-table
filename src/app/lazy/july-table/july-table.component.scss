@@ -1,0 +1,8 @@
+$blue-fore: #1890ff;
+$blue-bkgnd: #e6f7ff;
+
+.ht_clone_top_left_corner th,
+.handsontable th {
+  color: $blue-fore;
+  background-color: $blue-bkgnd;
+}

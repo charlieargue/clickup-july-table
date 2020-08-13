@@ -1,0 +1,25 @@
+<nz-space>
+  <nz-space-item>
+    <input
+      tabindex="1"
+      appSearchFormKeypress
+      type="text"
+      id="tbxSearch"
+      autofocus
+      value="{{ search$ | async }}"
+      placeholder="Press ENTER to search..."
+    />
+  </nz-space-item>
+  <nz-space-item>
+    <button
+      nz-button
+      nzType="dashed"
+      id="btnClear"
+      tabindex="2"
+      class="cursor-hover"
+      (click)="clear()"
+    >
+      🗑
+    </button>
+  </nz-space-item>
+</nz-space>

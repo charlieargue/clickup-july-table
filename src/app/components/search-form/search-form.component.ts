@@ -6,27 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-search-form',
-  template: `
-    <div style="margin-bottom: 16px;">
-      <input
-        tabindex="1"
-        appSearchFormKeypress
-        type="text"
-        id="tbxSearch"
-        autofocus
-        value="{{ search$ | async }}"
-        placeholder="Press ENTER to search..."
-      />
-      <button
-        id="btnClear"
-        tabindex="2"
-        style="margin-left: 8px;cursor: pointer;"
-        (click)="clear()"
-      >
-        ❌
-      </button>
-    </div>
-  `,
+  templateUrl: './search-form.component.html',
 })
 export class SearchFormComponent implements OnInit {
   search$: Observable<string>;
@@ -35,7 +15,7 @@ export class SearchFormComponent implements OnInit {
     this.search$ = store.pipe(select(selectSearch));
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   clear() {
     this.store.dispatch(new SetSearch(''));

@@ -1,0 +1,20 @@
+<nz-space nzDirection="vertical" nzSize="large" *ngIf="dataset.length">
+  <nz-space-item>
+    <nz-divider></nz-divider>
+    <app-search-form></app-search-form>
+  </nz-space-item>
+  <nz-space-item>
+    <hot-table
+      width="96%"
+      [hotId]="id"
+      [settings]="tableSettings"
+      [data]="dataset"
+      licenseKey="non-commercial-and-evaluation"
+    ></hot-table>
+  </nz-space-item>
+  <nz-space-item>
+    <button id="btnLoadMore" class="cursor-hover" (click)="increment()">
+      Load More
+    </button>
+  </nz-space-item>
+</nz-space>
