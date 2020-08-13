@@ -58,7 +58,7 @@ export class JulyTableComponent implements OnInit, OnDestroy {
 
   // ------------------------
   public ngOnInit() {
-    this.store.pipe(select(selectSearch)).subscribe((newSearch: string) => {
+    this.store.pipe(select(selectSearch), untilDestroyed(this)).subscribe((newSearch: string) => {
       if (isNil(newSearch) || isEmpty(newSearch)) {
         this.dataset = [...this.datasetShadow];
       } else {
