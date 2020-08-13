@@ -1,0 +1,43 @@
+{
+  "name": "clickup-test",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "ng serve",
+    "lint": "ng lint",
+    "e2e": "cypress open"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "10.0.2",
+    "@angular/cdk": "10.0.1",
+    "@angular/common": "10.0.2",
+    "@angular/compiler": "10.0.2",
+    "@angular/core": "10.0.2",
+    "@angular/forms": "10.0.2",
+    "@angular/material": "10.0.1",
+    "@angular/platform-browser": "10.0.2",
+    "@angular/platform-browser-dynamic": "10.0.2",
+    "@angular/router": "10.0.2",
+    "@handsontable/angular": "5.1.1",
+    "@ngneat/until-destroy": "7.3.2",
+    "@ngrx/entity": "10.0.0",
+    "@ngrx/store": "9.2.0",
+    "@ngrx/store-devtools": "9.2.0",
+    "handsontable": "7.4.2",
+    "lodash-es": "4.17.15",
+    "rxjs": "6.5.5",
+    "tslib": "2.0.0",
+    "zone.js": "0.10.3"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "0.1000.1",
+    "@angular/cli": "10.0.1",
+    "@angular/compiler-cli": "10.0.2",
+    "@types/node": "12.11.1",
+    "codelyzer": "6.0.0-next.1",
+    "cypress": "4.12.1",
+    "ts-node": "8.3.0",
+    "tslint": "6.1.0",
+    "typescript": "3.9.5"
+  }
+}
