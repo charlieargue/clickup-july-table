@@ -56,7 +56,7 @@ End-to-End (e2e) testing via Cypress is included with this project, and can be f
 
 ```sh
 # open Cypress testing tool
-npm e2e
+npm run e2e
 ```
 Then to run all tests, click the `july_table_spec.js` test file, and you should see:
 
